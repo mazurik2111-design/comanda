@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Реєстрація користувача</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #f5f5f5;
+      color: #333;
+      text-align: center;
+      padding: 50px 0;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    main {
+      flex-grow: 1;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, button {
+      padding: 8px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Реєстрація користувача</h1>
+  </header>
+
+  <main>
+    <h2>Заповніть форму</h2>
+    <form>
+        
+      <label for="fname">Ім'я:</label>
+      <input type="text" id="fname" name="fname" required>
+
+      <label for="lname">Прізвище:</label>
+      <input type="text" id="lname" name="lname" required>
+
+      <label for="dob">Дата народження:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label>Стать:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Чоловік</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Жінка</label>
+
+      <label for="email">Електронна пошта:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm-password">Підтвердіть пароль:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <label for="country">Країна проживання:</label>
+      <select id="country" name="country" required>
+        <option value="">Оберіть країну</option>
+        <option value="ua">Україна</option>
+        <option value="pl">Польща</option>
+        <option value="de">Німеччина</option>
+        <option value="us">США</option>
+      </select>
+
+      <label for="phone">Номер телефону:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10,13}" placeholder="Наприклад: 380XXXXXXXXX" required>
+
+      <label>
+        <input type="checkbox" name="agree" required>
+        Я погоджуюсь з умовами користування сайтом
+      </label>
+
+      <button type="submit">Зареєструватися</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Компанія. Всі права захищені.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Curabitur nec sem et eros luctus dignissim.</p>
+  </footer>
+</body>
+</html>
